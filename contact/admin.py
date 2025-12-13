@@ -1,7 +1,8 @@
 from django.contrib import admin
-from contact.models import Contact
+from contact.models import Contact, Category
 
 # Register your models here.
+@admin.register(Contact)
 class ContactAdmin(admin.ModelAdmin):
     list_display = ('id', 'first_name', 'last_name', 'email', 'created_date')
     ordering = ('-id',)
@@ -11,4 +12,7 @@ class ContactAdmin(admin.ModelAdmin):
     list_display_links = ('first_name',)
 
 
-admin.site.register(Contact, ContactAdmin)
+@admin.register(Category)
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = ('id', 'name',)
+    ordering = ('-id',)

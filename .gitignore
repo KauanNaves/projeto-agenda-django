@@ -4,8 +4,11 @@ __pycache__/
 *$py.class
 project/__pycache__/
 
+
+
 static/
 media/
+utils/
 
 # C extensions
 *.so
